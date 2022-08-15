@@ -14,7 +14,7 @@ public class BoardController {
     @Autowired
     BoardService boardService;
 
-    @CrossOrigin(origins = {"http://localhost:4200","http://192.168.29.210:4200"})
+    @CrossOrigin(origins = {"http://localhost:4200","http://192.168.29.210:4200","https://tic-tac-frontend.herokuapp.com"})
     @GetMapping
     public Board boardSetUp(){
         return boardService.setBoard();
@@ -27,7 +27,7 @@ public class BoardController {
         return boardService.getGameBoard();
     }
 
-    @CrossOrigin(origins = {"http://localhost:4200","http://192.168.29.210:4200"})
+    @CrossOrigin(origins = {"http://localhost:4200","http://192.168.29.210:4200","https://tic-tac-frontend.herokuapp.com"})
     @PostMapping(value="/mark", consumes = "application/json")
     @ResponseBody
     public String markBoard(@RequestParam(name="xPos") int xPos, @RequestParam(name="yPos") int yPos){
