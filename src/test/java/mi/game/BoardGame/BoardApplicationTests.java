@@ -1,4 +1,4 @@
-package mi.game.board;
+package mi.game.BoardGame;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
